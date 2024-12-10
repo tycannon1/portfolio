@@ -1,0 +1,165 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 500px; /* You can adjust the height to your liking */
+    padding: 50px;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+/* Text Side */
+.hero-text {
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    color: #333;
+    width: 50%; /* Take up half of the hero section */
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+/* Image Collage Side */
+.image-collage {
+    position: relative;
+    width: 50%; /* Take up the other half */
+    display: flex;
+    flex-wrap: wrap; /* Makes the images wrap */
+    justify-content: center; /* Centers the images */
+    align-items: flex-start; /* Align images to the top */
+    gap: 10px; /* Space between images */
+}
+
+.floating-img {
+    width: 150px; /* Default width, can change per image */
+    height: 150px; /* Default height, can change per image */
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    object-fit: cover;
+    border-radius: 8px; /* Rounded corners for a more dynamic look */
+    transition: opacity 1s ease, transform 1s ease, left 0.5s ease, top 0.5s ease;
+}
+
+/* Adjusting size and layout of individual images */
+.floating-img:nth-child(1) {
+    width: 180px;
+    height: 180px;
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+.floating-img:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.floating-img:nth-child(3) {
+    width: 160px;
+    height: 160px;
+    transform: scale(0.95);
+    z-index: 3;
+}
+
+.floating-img:nth-child(4) {
+    width: 200px;
+    height: 200px;
+    transform: scale(1);
+    z-index: 4;
+}
+
+.floating-img:nth-child(5) {
+    width: 140px;
+    height: 140px;
+    transform: scale(1.2);
+    z-index: 5;
+}
+
+.floating-img:nth-child(6) {
+    width: 180px;
+    height: 180px;
+    transform: scale(1.05);
+    z-index: 6;
+}
+
+.floating-img:nth-child(7) {
+    width: 130px;
+    height: 130px;
+    transform: scale(1);
+    z-index: 7;
+}
+
+.floating-img:nth-child(8) {
+    width: 150px;
+    height: 150px;
+    transform: scale(0.85);
+    z-index: 8;
+}
+
+/* Add the fade-in effect when images are loaded */
+.floating-img.fade-in {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
