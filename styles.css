@@ -7,34 +7,56 @@
 
 /* Basic layout */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: "Lalezar", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
+
+
 
 /* Header */
 header {
-    background-color: #333;
-    color: #333;
+    background-color: white;
+    color: #56331D;
     padding: 10px 20px;
+    opacity: 1;
+}
+.header-container {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Push items to opposite sides */
+    align-items: center; /* Align items vertically */
+    padding: 10px 20px; /* Add spacing inside the header */
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    backdrop-filter: blur(10px); /* Add a blur effect */
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Links on hover */
+header a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.left-section {
+    display: flex; /* Align profile image and name in a row */
+    align-items: center; /* Vertically align items */
+    gap: 10px; /* Space between the profile image and name */
 }
 
 .profile-img {
-    width: auto;
-    height: 90px;
-    
-    object-fit: cover;
+    width: 90px; /* Set width */
+    height: 90px; /* Set height to the same as width for a perfect circle */
+    border: 5px solid grey; /* Grey border with thickness of 5px */
+    border-radius: 50%; /* Make the image a circle */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    background-color: #EFD7DE;
 }
 
 .name {
     font-size: 1.5em;
     font-weight: bold;
+    line-height: 1;
 }
+
+
 
 nav ul {
     display: flex;
@@ -46,7 +68,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #56331D;
     text-decoration: none;
 }
 
@@ -96,17 +118,20 @@ nav a {
 /* Center Text Box */
 .hero-text {
     position: relative;
-    z-index: 2; /* Place text on top of the images */
-    text-align: center;
-    color: #333;
-    width: 50%; /* Text box takes up half of the hero section */
+    color: white;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for text box */
-    border: 3px solid #333; /* Line running around the text box */
-    opacity: 0; /* Initially hidden */
-    transform: translateY(30px); /* Start below the screen */
+    z-index: 3;
+    max-width: 600px;
+    text-align: center;
+    font-size: 24px;
+    /* Soft shadow around the text for a fading effect */
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(2px); /* Reduced blur effect */
+    opacity: 0;
+    transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
+
 
 .hero-text.fade-in {
     opacity: 1;
