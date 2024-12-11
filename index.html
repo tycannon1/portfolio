@@ -5,35 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Londrina+Shadow&display=swap" rel="stylesheet">
 </head>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
-
 <body>
     <header>
         <div class="header-container">
-          <div class="left-section">
-            <img src="images/94467128-5B60-4A83-B551-54B899C10270.PNG" alt="Profile" class="profile-img">
-            <div class="name">
-              <span>Ty</span><br>
-              <span>Cannon</span>
+            <div class="left-section">
+                <img src="images/94467128-5B60-4A83-B551-54B899C10270.PNG" alt="Profile" class="profile-img">
+                <div class="name">
+                    <span>Ty</span><br>
+                    <span>Cannon</span>
+                </div>
             </div>
-          </div>
-          <nav class="nav">
-            <ul>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#dev-portfolio">Dev Portfolio</a></li>
+                    <li><a href="#marketing-portfolio">Marketing Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </header>
+    </header>
 
     <section class="hero">
         <!-- Image Collage Section -->
@@ -52,10 +51,66 @@
         <div class="hero-text">
             <h2>TY CANNON</h2>
             <p>WEB DEVELOPER / MARKETING SPECIALIST</p>
-            <button onclick="location.href='#dev-portfolio'">Dev Portfolio</button>
-            <button onclick="location.href='#marketing-portfolio'">Marketing Portfolio</button>
+            <button onclick="document.getElementById('dev-portfolio').scrollIntoView({ behavior: 'smooth' });">Dev Portfolio</button>
+            <button onclick="document.getElementById('marketing-portfolio').scrollIntoView({ behavior: 'smooth' });">Marketing Portfolio</button>
         </div>
     </section>
+
+    <!-- Dev Portfolio Section -->
+    <section id="dev-portfolio" class="portfolio-section">
+        <h2>Development Portfolio</h2>
+        <div class="projects-container">
+            <!-- Hidden Gems Project -->
+            <div class="project">
+                <h3>Hidden Gems</h3>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1DYMmb4IZsk?si=xW-G3kCiRBMYFyap" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="description">
+                    <p>A platform showcasing unique and underappreciated travel destinations around the world. Built with responsive design and seamless navigation for users to explore.</p>
+                </div>
+            </div>
+    
+            <!-- Global Thrift Project -->
+            <div class="project">
+                <h3>Global Thrift</h3>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XDrdTHrg9_0?si=N8MDQrn6wxtp3L78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="description">
+                    <p>An online marketplace for thrifted goods with a focus on sustainable shopping. Implements secure payment integration and user authentication.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Tech Stack Section -->
+        <div class="tech-stack">
+            <h3>Languages and Tools</h3>
+            <p>HTML, CSS, JavaScript, Node.js, Express, React, MongoDB, PostgreSQL, Sass, EJS, Git, GitHub</p>
+        </div>
+    </section>
+    
+
+    <!-- Marketing Portfolio Section -->
+    <section id="marketing-portfolio" class="portfolio-section">
+        <h2>Marketing Portfolio</h2>
+        <p>Content about your marketing projects goes here...</p>
+    </section>
+
+    <!-- Additional Sections -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Details about your background and expertise...</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Provide contact details or a form for inquiries...</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Ty Cannon. All rights reserved.</p>
+    </footer>
 
     <script src="portfolio.js"></script>
 </body>
