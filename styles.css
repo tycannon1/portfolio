@@ -270,7 +270,9 @@ nav a {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    font-family: 'Londrina Shadow', cursive;
+    font-family: 'Lalezar', cursive;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 #about .about-image {
@@ -355,4 +357,63 @@ nav a {
 
 #contact .social-links a:hover {
     color: #003d80;
+}
+.video-wrapperig {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px; /* Adjust width as needed */
+    margin: 0 auto;
+    background-color: #f4f4f4; /* Optional: Add a background for aesthetics */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    overflow: hidden;
+}
+
+.video-wrapperig iframe {
+    border: none;
+    width: 100%;
+    height: 560px; /* Maintain vertical aspect ratio */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Adjust spacing around the button */
+}
+
+.project h4{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Lalezar', cursive;
+}
+
+.description1 {
+    text-align: center;
+}
+
+.campaigns-section h3 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 28px;
+    color: #28a745;
+    text-align: center;
+}
+.experience-section {
+    margin-top: 3%;
+    text-align: center;
+}
+.experience-section h3 {
+    color: #28a745;
+    font-size: 25px;
+}
+
+.experience-section p {
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 20px;
+    color: #56331D;
+
 }
