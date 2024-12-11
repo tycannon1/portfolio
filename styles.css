@@ -14,7 +14,7 @@ body {
 /* Header */
 header {
     background-color: #333;
-    color: white;
+    color: #333;
     padding: 10px 20px;
 }
 
@@ -25,9 +25,9 @@ header {
 }
 
 .profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: auto;
+    height: 90px;
+    
     object-fit: cover;
 }
 
@@ -53,113 +53,89 @@ nav a {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
-    height: 500px; /* You can adjust the height to your liking */
+    height: 500px; /* Adjust to your liking */
     padding: 50px;
-    background-color: #f4f4f4;
+    background-color: #333;
     overflow: hidden;
 }
 
-/* Text Side */
-.hero-text {
-    position: relative;
-    z-index: 10;
-    text-align: left;
-    color: #333;
-    width: 50%; /* Take up half of the hero section */
+/* Image Collage Section */
+/* Image Collage Section */
+.image-collage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap into new rows */
+    justify-content: flex-start; /* Align images to the left */
+    align-items: flex-start; /* Align images to the top */
+    z-index: 1;
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
 }
 
+/* Make images smaller to fit more in the container */
+.floating-img {
+    width: 20%; /* Change this value to fit more images per row */
+    height: 100%; /* Make images take full height of the hero section */
+    opacity: 0.4; /* Make images slightly transparent */
+    transition: opacity 1s ease, transform 1s ease;
+    object-fit: cover; /* Ensures images maintain their aspect ratio */
+ 
+    margin: 0; /* Remove any margin between images */
+}
+
+.floating-img.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Center Text Box */
+.hero-text {
+    position: relative;
+    z-index: 2; /* Place text on top of the images */
+    text-align: center;
+    color: #333;
+    width: 50%; /* Text box takes up half of the hero section */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for text box */
+    border: 3px solid #333; /* Line running around the text box */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Start below the screen */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-text.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text and Button Styles */
 .hero-text h2 {
     font-size: 2.5em;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .hero-text p {
     font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
-/* Image Collage Side */
-.image-collage {
-    position: relative;
-    width: 50%; /* Take up the other half */
-    display: flex;
-    flex-wrap: wrap; /* Makes the images wrap */
-    justify-content: center; /* Centers the images */
-    align-items: flex-start; /* Align images to the top */
-    gap: 10px; /* Space between images */
+.hero-text button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.floating-img {
-    width: 150px; /* Default width, can change per image */
-    height: 150px; /* Default height, can change per image */
-    opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
-    object-fit: cover;
-    border-radius: 8px; /* Rounded corners for a more dynamic look */
-    transition: opacity 1s ease, transform 1s ease, left 0.5s ease, top 0.5s ease;
-}
-
-/* Adjusting size and layout of individual images */
-.floating-img:nth-child(1) {
-    width: 180px;
-    height: 180px;
-    transform: scale(0.9);
-    z-index: 1;
-}
-
-.floating-img:nth-child(2) {
-    width: 120px;
-    height: 120px;
-    transform: scale(1.1);
-    z-index: 2;
-}
-
-.floating-img:nth-child(3) {
-    width: 160px;
-    height: 160px;
-    transform: scale(0.95);
-    z-index: 3;
-}
-
-.floating-img:nth-child(4) {
-    width: 200px;
-    height: 200px;
-    transform: scale(1);
-    z-index: 4;
-}
-
-.floating-img:nth-child(5) {
-    width: 140px;
-    height: 140px;
-    transform: scale(1.2);
-    z-index: 5;
-}
-
-.floating-img:nth-child(6) {
-    width: 180px;
-    height: 180px;
-    transform: scale(1.05);
-    z-index: 6;
-}
-
-.floating-img:nth-child(7) {
-    width: 130px;
-    height: 130px;
-    transform: scale(1);
-    z-index: 7;
-}
-
-.floating-img:nth-child(8) {
-    width: 150px;
-    height: 150px;
-    transform: scale(0.85);
-    z-index: 8;
-}
-
-/* Add the fade-in effect when images are loaded */
-.floating-img.fade-in {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+.hero-text button:hover {
+    background-color: #555;
 }

@@ -1,11 +1,15 @@
-// JavaScript for the fade-in effect on images
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = () => {
+    // Fade in images
     const images = document.querySelectorAll('.floating-img');
-    
-    // Apply fade-in and stagger the effect
-    images.forEach((img, index) => {
+    images.forEach((image, index) => {
         setTimeout(() => {
-            img.classList.add('fade-in');
-        }, index * 300); // Staggered fade-in effect
+            image.classList.add('fade-in'); // Add the fade-in class after a slight delay
+        }, index * 200); // Stagger the delay for each image
     });
-});
+
+    // Fade in text box
+    const textBox = document.querySelector('.hero-text');
+    setTimeout(() => {
+        textBox.classList.add('fade-in'); // Fade in the text box
+    }, images.length * 200); // Delay text box fade-in after all images
+};
