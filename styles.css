@@ -417,3 +417,210 @@ nav a {
     color: #56331D;
 
 }
+
+/* Mobile Layout */
+@media only screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 10px 15px;
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px 15px;
+    }
+
+    .left-section {
+        justify-content: center;
+        margin-bottom: 10px; /* Space between profile image and name */
+    }
+
+    .profile-img {
+        width: 80px; /* Smaller profile image */
+        height: 80px;
+    }
+
+    .name {
+        font-size: 1.2em; /* Adjust font size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .hero {
+        height: 350px; /* Reduce hero section height */
+        padding: 30px;
+    }
+
+    .hero-text {
+        max-width: 90%;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .hero-text h2 {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .portfolio-section {
+        padding: 30px;
+    }
+
+    .projects-container {
+        display: block; /* Stack projects vertically */
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .project {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .video-wrapper {
+        padding-bottom: 75%; /* Adjust aspect ratio for videos */
+    }
+
+    /* Tech Stack */
+    .tech-stack {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .tech-stack h3 {
+        font-size: 1.5rem;
+    }
+
+    /* About Me Section */
+    #about {
+        padding: 30px 15px;
+    }
+
+    #about h2 {
+        font-size: 2rem; /* Adjust header font size */
+    }
+
+    #about p {
+        font-size: 1rem;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    #about .about-image {
+        width: 120px; /* Smaller image */
+        height: 120px;
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 30px 15px;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact form {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        font-size: 1rem;
+    }
+
+    #contact form button {
+        font-size: 1.1rem;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+
+    .social-links a {
+        font-size: 1.2rem; /* Adjust icon size */
+        margin: 0 8px;
+    }
+
+    /* Video Wrapper for Small Screens */
+    .video-wrapperig {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .video-wrapperig iframe {
+        height: 300px; /* Adjust iframe height for mobile */
+    }
+
+    /* Buttons */
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        margin: 20px 0;
+    }
+
+    /* Experience Section */
+    .experience-section p {
+        font-size: 16px; /* Adjust text size */
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* Campaigns Section */
+    .campaigns-section h3 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    /* Project Titles */
+    .project h4 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    /* Description */
+    .description1 {
+        font-size: 1rem; /* Adjust description text */
+    }
+
+    /* Floating Images */
+    .floating-img {
+        width: 25%; /* Adjust image size for smaller screens */
+    }
+}
+
+/* Tablet Layout */
+@media only screen and (max-width: 1024px) {
+    /* General layout adjustments for tablet-sized screens */
+    .projects-container {
+        flex-direction: row; /* Change to row layout for larger screens */
+        justify-content: space-between; /* Spread projects across the container */
+        align-items: center;
+    }
+
+    .project {
+        max-width: 100%;
+    }
+
+    .video-wrapper {
+        padding-bottom: 56.25%; /* Adjust aspect ratio */
+    }
+
+    .hero-text h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-text p {
+        font-size: 1.1em;
+    }
+}
